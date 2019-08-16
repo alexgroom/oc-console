@@ -22,7 +22,7 @@ objects:
     - annotations:
       from:
         kind: DockerImage
-        name: docker.io/edseymour/gottyforocp:latest
+        name: quay.io/agroom/gottyforocp:latest
       generation: 2
       importPolicy: {}
       name: latest
@@ -31,10 +31,10 @@ objects:
     - annotations:
       from:
         kind: DockerImage
-        name: docker.io/edseymour/gottyforocp:v3.7
+        name: quay.io/agroom/gottyforocp:v3.11
       generation: 2
       importPolicy: {}
-      name: v3.7
+      name: v3.11
       referencePolicy:
         type: Source
   status:

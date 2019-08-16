@@ -21,12 +21,12 @@ objects:
         name: dockerio
       to:
         kind: DockerImage
-        name: docker.io/edseymour/gottyforocp:v3.7
+        name: quay.io/agroom/gottyforocp:v3.11
     postCommit: {}
     resources: {}
     runPolicy: Serial
     source:
-      dockerfile: "FROM fedora\n\nUSER 0\n\nENV OCREL=https://github.com/openshift/origin/releases/download/v3.7.1/openshift-origin-client-tools-v3.7.1-ab0f056-linux-64bit.tar.gz\nENV
+      dockerfile: "FROM fedora\n\nUSER 0\n\nENV OCREL=https://github.com/openshift/origin/releases/download/v3.11.0/openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit.tar.gz\nENV
         GOPATH=/go\n\n# Install OC client tool\nRUN  curl -L --silent -o oc.tar.gz
         $OCREL && ls -l && \\\n     yum install -y tar gzip findutils && \\\n     mkdir
         /tmp/oc && \\\n     tar -xvf oc.tar.gz -C /tmp/oc && \\\n     find /tmp/oc
